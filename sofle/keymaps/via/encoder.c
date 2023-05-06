@@ -28,9 +28,12 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
-            tap_code(KC_PGDN);
+            // Use PGDN-PGUP for PAGE instead of MOUSE SCROLL WHEEL
+            //tap_code(KC_PGDN);
+            tap_code(KC_WH_D);
         } else {
-            tap_code(KC_PGUP);
+            //tap_code(KC_PGUP);
+            tap_code(KC_WH_U);
         }
     }
     return true;
