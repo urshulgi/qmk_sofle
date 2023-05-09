@@ -23,12 +23,13 @@ for more options.
 */
 
 #if defined(KEYBOARD_sofle_rev1)
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
 // Add RGB underglow and top facing lighting
 #define RGB_DI_PIN D3
 #define SPLIT_WPM_ENABLE
 #define RGBLED_NUM 72
 #define RGBLED_SPLIT {36,36}
-#ifdef RGB_MATRIX_ENABLE
+#	 ifdef RGB_MATRIX_ENABLE
 #        define DRIVER_LED_TOTAL RGBLED_NUM
 #        define RGB_MATRIX_SPLIT RGBLED_SPLIT
 #        define SPLIT_TRANSPORT_MIRROR
