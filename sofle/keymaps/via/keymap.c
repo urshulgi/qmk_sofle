@@ -17,9 +17,21 @@
 
 #include QMK_KEYBOARD_H
 #include "oled.c"
-#include "encoder.c"
 
-//Default keymap. This can be changed in Via. Use oled.c and encoder.c to change beavior that Via cannot change.
+//Encoder default config for VIA compatibility
+
+#ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [0] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD),           ENCODER_CCW_CW(KC_WH_D, KC_WH_U) },
+    [1] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD),           ENCODER_CCW_CW(KC_WH_D, KC_WH_U) },
+    [2] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD),           ENCODER_CCW_CW(KC_WH_D, KC_WH_U) },
+    [3] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD),           ENCODER_CCW_CW(KC_WH_D, KC_WH_U) },
+    [4] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD),           ENCODER_CCW_CW(KC_WH_D, KC_WH_U) },
+    [5] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD),           ENCODER_CCW_CW(KC_WH_D, KC_WH_U) }
+};
+#endif
+
+//Default keymap. This can be changed in Via. Use oled.c to change beavior that Via cannot change.
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*

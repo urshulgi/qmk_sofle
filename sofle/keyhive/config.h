@@ -39,7 +39,7 @@
 #define ENCODERS_PAD_B            { F5 }
 #define ENCODERS_PAD_A_RIGHT      { F4 }
 #define ENCODERS_PAD_B_RIGHT      { F5 }
-#define ENCODER_RESOLUTIONS       { 6 }
+#define ENCODER_RESOLUTIONS       { 4 }
 #define ENCODER_RESOLUTIONS_RIGHT { 2 }  // Left encoder seems to have double-output issue but right does not.
 
 #define TAP_CODE_DELAY  10
